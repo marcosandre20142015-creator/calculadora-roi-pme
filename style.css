@@ -1,0 +1,173 @@
+/* --- Variáveis de Cores e Estilo --- */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent: #10b981;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --radius: 12px;
+}
+
+/* --- Reset Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- Container Principal --- */
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* --- Card da Calculadora --- */
+.calculator-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-secondary);
+}
+
+.input-group input {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+}
+
+/* --- Botão --- */
+.btn-calcular {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 0.5rem;
+}
+
+.btn-calcular:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-calcular:active {
+    transform: scale(0.98);
+}
+
+/* --- Área de Resultado --- */
+.resultado {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.resultado.hidden {
+    display: none;
+}
+
+.resultado h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.resultado p {
+    margin-bottom: 0.6rem;
+    color: var(--text-secondary);
+}
+
+.resultado .destaque {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+}
+
+.resultado .destaque-anual {
+    color: #38bdf8;
+    font-size: 1.2rem;
+}
+
+.resultado strong {
+    font-size: 1.2rem;
+}
+
+/* --- Estilo do Botão Copiar --- */
+.btn-copiar {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+    margin-top: 1.5rem;
+}
+
+.btn-copiar:hover {
+    background-color: var(--accent);
+    color: var(--bg-color);
+}
+
+.btn-copiar:active {
+    transform: scale(0.98);
+}
